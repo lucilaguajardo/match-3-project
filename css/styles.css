@@ -1,0 +1,209 @@
+/* VARIABLES */
+
+:root {
+    --square-size: 60px;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: pixelLCD-7;
+    src: url(../assets/fonts/Pixel\ LCD-7.ttf)
+}
+
+@font-face {
+    font-family: pixelade;
+    src: url(../assets/fonts/pixelade.ttf)
+}
+
+@font-face {
+    font-family: pixel-maz;
+    src: url(../assets/fonts/pixel_maz.ttf)
+}
+
+@font-face {
+    font-family: pixeled;
+    src: url(../assets/fonts/Pixeled.ttf)
+}
+
+/* PAGE */
+
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-image: url(../assets/img/background.jpg);
+  background-repeat: no-repeat;
+  background-color: #0e0524;
+
+  color: #522EF2;
+}
+
+/* MAIN STYLES */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position-y: 50%;
+    padding: 0 10px;
+    user-select: none;
+}
+
+p {
+    font-family: pixelade;
+    font-size: 16px;
+    margin: 0;
+}
+  
+.main-game-container {
+    max-width: 500px;
+    width: 500px;
+    height: fit-content;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: pixelLCD-7;
+    font-size: 50px;
+    margin: 0;
+}
+
+/* GRID */
+
+.grid-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgb(0 0 0 / 73%);
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: blue;
+}
+
+.square {
+    width: var(--square-size);
+    height: var(--square-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    transition: background-color 0.4s, top 0.4s, left 0.4s, bottom 0.4s,
+      right 0.4s, transform 0.2s;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 7px;
+    transform: scale(1);
+}
+
+.planet {
+    width: 100%;
+    transform: scale(1);
+    transition: 0.2s;
+}
+
+.new-square {
+    transform: scale(0.5);
+}
+
+.delete-square{
+    transform: scale(0);
+}
+
+/* .selected-square {  
+} */
+
+.selected-square .planet {
+    transform: scale(1.1);
+}
+
+.pushed-square {
+    border-style: dashed;
+}
+  
+/* STATS */
+
+.control-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 33rem;
+}
+
+.control-stats-container,
+.control-icons-container {
+    display: flex;
+}
+
+.control-stats-container>*,
+.control-icons-container>* {
+    margin: 0.5em;
+}
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    overflow-y: auto;
+    background-color: rgba(255, 0, 0, 0.4);
+    z-index: 10000;
+    transition: opacity 0.3s;
+}
+
+/* MODAL */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    background-color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+    text-shadow: none;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* CLOCK */
+
+.clock-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.clock {
+    font-family: pixelLCD-7;
+    font-size: 50px;
+}
+
+/* .clock {
+
+} */
+
+/* MEDIA QUERIES */

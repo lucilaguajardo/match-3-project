@@ -29,19 +29,38 @@
     <link rel="stylesheet" href="./css/styles.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href="./assets/img/favicon-stars.svg">
 
     <!-- Title -->
     <title>MatcheADAs</title>
-
 </head>
 <body>
- 
+    <main class="main-game-container">
+        <header>
+            <p class="title">MatcheADAs</p>
+        </header>
+        <div class="control-container">
+            <div class="control-stats-container">
+                <p class="stat-title">Combo x<span id="combo-counter">1</span></p>
+                <p class="stat-title">Puntos: <span id="points-counter">0</span></p>
+            </div>
+            <div class="control-icons-container">
+                <p class="" id="help-button">I</i>
+                <img src="./assets/img/restart-button.svg" id="restart-button"></i>
+            </div>
+        </div>
+        <div class="grid-container" id="grid"></div>
+        <div class="clock-container">
+            <i class=""></i>
+            <p class="clock" id="clock">0:30</p>
+        </div>
+    </main>
 
-
-
-
-    <script src="./main.js"></script>
+    <!-- Script Sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
+    <!-- Script JS -->
+    <script src="./main.js"></script>
+
 </body>
 </html>
